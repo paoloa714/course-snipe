@@ -3,19 +3,26 @@
 class UCLACourseHelper extends BaseCourseHelper {
 
     public function __construct() {
-        
+        $this->_config = Utils::getConfig('UCLA');
     }
 
     public function getTerms() {
-        return 'terms';
-    }
-
-    public function getQuarters() {
-        return 'quarters';
+        $html = new simple_html_dom();
+        $html->load_file($this->_config['url']['terms']);
+        
+        $something = $html->find('[id$=TermDisp] option');
+        
+        $return = array();
+        foreach($something as $element){
+            $return[$element->value] = $element->innertext;
+        }
+        
+        return $return;
+        
     }
 
     public function getCourses($term, $quarter) {
-        return 'Given term and quarter, return courses';
+        return 'Courses';
     }
 
     public function getClasses($course, $term, $quarter) {

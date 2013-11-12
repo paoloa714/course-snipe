@@ -8,8 +8,8 @@ class testController extends requestController {
         $Campus = 'UCLA';
         $courseHelperName = $Campus.'CourseHelper';
         $courseHelper = new $courseHelperName();
-        
-        var_dump(Utils::getConfig('UCLA'));
+        return $courseHelper->getTerms();
+       
     }
 
 }

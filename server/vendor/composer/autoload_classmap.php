@@ -7,11 +7,11 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'BaseCourseHelper' => $baseDir . '/lib/classes/CourseHelpers/BaseCourseHelper.php',
-    'ComposerAutoloaderInitac78c34c39f8bf4cf923caccbc162b84' => $vendorDir . '/composer/autoload_real.php',
+    'ComposerAutoloaderInit7ce22496a7e27e8e7f56aece2879d3c0' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Sunra\\PhpSimple\\HtmlDomParser' => $vendorDir . '/sunra/php-simple-html-dom-parser/Src/Sunra/PhpSimple/HtmlDomParser.php',
     'UCLACourseHelper' => $baseDir . '/lib/classes/CourseHelpers/UCLACourseHelper.php',
-    'Utils' => $baseDir . '/lib/classes/Utils/config.php',
+    'Utils' => $baseDir . '/lib/classes/Utils/Utils.php',
     'requestController' => $baseDir . '/lib/controllers/requestController.php',
     'simple_html_dom' => $vendorDir . '/sunra/php-simple-html-dom-parser/Src/Sunra/PhpSimple/simplehtmldom_1_5/simple_html_dom.php',
     'simple_html_dom_node' => $vendorDir . '/sunra/php-simple-html-dom-parser/Src/Sunra/PhpSimple/simplehtmldom_1_5/simple_html_dom.php',
