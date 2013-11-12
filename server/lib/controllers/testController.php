@@ -1,6 +1,5 @@
 <?php
 
-require_once('vendor/autoload.php');
 
 class testController extends requestController {
 
@@ -8,7 +7,7 @@ class testController extends requestController {
         $Campus = 'UCLA';
         $courseHelperName = $Campus.'CourseHelper';
         $courseHelper = new $courseHelperName();
-        return $courseHelper->getTerms();
+        return $courseHelper->getSubjects();
        
     }
 

@@ -21,8 +21,18 @@ class UCLACourseHelper extends BaseCourseHelper {
         
     }
 
-    public function getCourses($term, $quarter) {
-        return 'Courses';
+    public function getSubjects() {
+        $html = new simple_html_dom();
+        $html->load_file($this->_config['url']['terms']);
+        
+        $options = $html->find('[id$=SubjectArea] option');
+        
+        $return = array();
+        foreach($options as $option){
+            $return[$option->value] = $option->innertext;
+        }
+        
+        return $return;
     }
 
     public function getClasses($course, $term, $quarter) {
